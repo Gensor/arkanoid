@@ -10,15 +10,11 @@ public class Main extends JFrame implements ActionListener {
 
     public Main() {
             super("arkanoid");
+
             timer = new Timer(18,this);
-
             setVisible(true);
-
             setSize(500,500);
-           // setLayout(new BorderLayout()); //zbytocne
             setResizable(false);
-
-
 
             add(hra =new Hra());
 
@@ -27,12 +23,14 @@ public class Main extends JFrame implements ActionListener {
         }
 
     public static void main(String[] args) {
-       new Main();
+
+        new Main();
     }
 
 
      @Override
-     public void actionPerformed(ActionEvent e) {
+     public void actionPerformed(ActionEvent e)
+     {
         hra.zmenPoziciu();
      }
 
